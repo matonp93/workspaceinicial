@@ -1,0 +1,12 @@
+#products-table{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#products-table img{
+max-width: 300px;
+max-height: 300px;
+border-radius: 10px 10px 10px 10px;
+
+}
