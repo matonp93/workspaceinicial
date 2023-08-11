@@ -1,0 +1,51 @@
+/*ESTILOS DEL CONTENEDOR*/
+#products{
+    
+}
+.productcard{
+display: grid;
+margin: 40px;
+grid-template-columns: 1.5fr 1fr 0.5fr;
+align-items: center;
+justify-content: center;
+place-content: center;
+place-items: center;
+max-width: 90%;
+max-height: 90%;
+background-color: rgba(255, 166, 0, 0.208) ;
+border: 2px solid orange;
+border-radius: 15px 15px 15px 15px;
+}
+/*ESTILOS DEL div y imagen*/
+.imgdiv{
+display: grid;
+place-items: center;
+}
+.imgdiv img{
+max-width: 90%;
+max-height: 90%;
+border-radius: 15px 15px 15px 15px;
+}
+/*ESTILOS DEL div y h3*/
+.h3div{
+
+}
+/*ESTILOS DEL div descripcion*/
+.pdiv{
+    display: flex;
+    text-align: justify;
+
+}
+/*ESTILOS DEL div y contador ventas*/
+.p2div{
+
+}
+
+/*ESTILOS DEL contador vendidos*/
+.vendidos{
+
+}
+/*ESTILOS DEL descripcion*/
+.descripcion{
+
+}
