@@ -10,28 +10,24 @@ function listadoProductos(){
     fetch(linkAutos)
     .then(response => response.json())
     .then(data => {
-        console.log(data.products)
-        let table = document.createElement("table");
-        table.setAttribute("id","products-table");
         data.products.forEach(element => {
             console.log(element)
-            let tr = document.createElement("tr");
-            let td1 = document.createElement("td");  
-            let td2 = document.createElement("td");
-            let td3 = document.createElement("td");
-            let image = document.createElement("img");
             let h3 = document.createElement("h3");
+            h3.innerHTML+= element.name + " - " + element.currency + " " + element.cost;
+            let p1 = document.createElement("p");
+            p1.innerHTML+=element.description;
+            let p2 = document.createElement("p");
+            p2.innerHTML+=element.soldCount+ " vendidos";
+            let nDiv = document.createElement("div");
+            let image = document.createElement("img");
             image.setAttribute("src",element.image);
-            td1.appendChild(image);
-            h3.innerHTML+=element.name;  // <h3>(Nombre elemento)</h3>
-            td2.innerHTML+=h3.textContent + "<br>" + element.description;
-            td3.innerHTML+=element.soldCount + " vendidos";
-            tr.appendChild(td1);
-            tr.appendChild(td2);
-            tr.appendChild(td3);
-            table.appendChild(tr); 
+            nDiv.appendChild(image);
+            nDiv.appendChild(h3);
+            nDiv.appendChild(p1);
+            nDiv.appendChild(p2);
+            products.appendChild(nDiv);
         });
-        products.appendChild(table);
+
     })
 
 }
