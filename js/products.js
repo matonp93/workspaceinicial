@@ -15,7 +15,8 @@ switch (localStorage.getItem("catID")){
         productsTitle.innerHTML+="Juguetes";
         productsDesc.innerHTML+="Encuentra aquí los mejores precios para niños/as de cualquier edad.";
     break;
-    case "103": productsTitle.innerHTML+="Muebles";
+    case "103": 
+        productsTitle.innerHTML+="Muebles";
         productsDesc.innerHTML+="Muebles antiguos, nuevos y para ser armados por uno mismo.";
 }
 listadoProductos();
