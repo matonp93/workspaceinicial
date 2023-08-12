@@ -1,10 +1,28 @@
+
+
+:root {
+    --primary:#fd7e14;
+    --secondary:rgba(255, 166, 0, 0.208);
+    --blue:#0d6efd;
+    --indigo: #6610f2;
+    --red:red;
+    --dark:black;
+    --light:white;
+}
+body{
+    font-family: 'poppins', 'Times New Roman', Times, serif;
+    background: rgb(255,214,141);
+    background: linear-gradient(328deg, rgba(255,214,141,0.7354988399071926) 0%, rgba(185,185,185,0.8329466357308585) 75%);
+}
 /*ESTILOS DEL CONTENEDOR*/
 #products{
-    
+    text-align: center;
+    padding: 10px;
 }
 .productcard{
 display: grid;
 margin: 40px;
+text-align: left;
 grid-template-columns: 1.5fr 1fr 0.5fr;
 align-items: center;
 justify-content: center;
@@ -12,10 +30,12 @@ place-content: center;
 place-items: center;
 max-width: 90%;
 max-height: 90%;
-background-color: rgba(255, 166, 0, 0.208) ;
-border: 2px solid orange;
+background-color: rgba(241, 236, 236, 0.55) ;
+border: 2px  var(--primary);
 border-radius: 15px 15px 15px 15px;
+box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.473);
 }
+
 /*ESTILOS DEL div y imagen*/
 .imgdiv{
 display: grid;
@@ -25,27 +45,34 @@ place-items: center;
 max-width: 90%;
 max-height: 90%;
 border-radius: 15px 15px 15px 15px;
+box-shadow: 0px 0px 15px 1px rgba(255, 255, 255, 0.639);
 }
 /*ESTILOS DEL div y h3*/
-.h3div{
-
+.h3div h3{
+ font-size: 220%;
 }
-/*ESTILOS DEL div descripcion*/
-.pdiv{
-    display: flex;
-    text-align: justify;
 
-}
 /*ESTILOS DEL div y contador ventas*/
 .p2div{
-
+    justify-content: end;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+/*ESTILOS DEL precio*/
+.precio{
+    color:var(--primary);
+    font-size: 130%;
+    font-weight: bold;
 }
 
 /*ESTILOS DEL contador vendidos*/
 .vendidos{
-
+ text-align: end;
+ font-weight: 400;
+ font-size: 110%;
 }
 /*ESTILOS DEL descripcion*/
 .descripcion{
-
+font-size: 100%;
 }
