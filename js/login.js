@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function login(password, email){
         if ((validarPassword(password)) && (validarEmail(email))){
+            localStorage.setItem("email", email);
+            localStorage.setItem("password", password);
             accesoPermitido();
             location.href = "index.html";
         } else {
@@ -30,9 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
     btnEnviar.addEventListener("click", () => {
         let password = document.getElementById("password").value;
         let email = document.getElementById("email").value;
-        localStorage.setItem("email", email);
-        localStorage.setItem("password", password);
         login(password, email);
-
     });
 })
