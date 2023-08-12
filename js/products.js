@@ -1,13 +1,29 @@
 const products = document.getElementById("products");
-const linkAutos = "https://japceibal.github.io/emercado-api/cats_products/101.json";
+const productsTitle = document.getElementById("productsTitle");
+const productsDesc = document.getElementById("productsDesc");
+let link = "https://japceibal.github.io/emercado-api/cats_products/";
 
 document.addEventListener("DOMContentLoaded",()=>{
+    link+=localStorage.getItem("catID")+".json";
 
+switch (localStorage.getItem("catID")){
+    case "101": 
+        productsTitle.innerHTML+="Autos";
+        productsDesc.innerHTML+='Los mejores precios en autos 0 kilómetro, de alta y media gama.';
+    break;
+    case "102": 
+        productsTitle.innerHTML+="Juguetes";
+        productsDesc.innerHTML+="Encuentra aquí los mejores precios para niños/as de cualquier edad.";
+    break;
+    case "103": 
+        productsTitle.innerHTML+="Muebles";
+        productsDesc.innerHTML+="Muebles antiguos, nuevos y para ser armados por uno mismo.";
+}
 listadoProductos();
 })
 
 function listadoProductos(){
-    fetch(linkAutos)
+    fetch(link)
     .then(response => response.json())
     .then(data => {
         data.products.forEach(element => {
