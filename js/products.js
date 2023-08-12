@@ -13,7 +13,10 @@ function listadoProductos(){
         data.products.forEach(element => {
             console.log(element)
             let h3 = document.createElement("h3");
-            h3.innerHTML+= element.name + " - " + element.currency + " " + element.cost;
+            h3.innerHTML+= element.name + " <br>";
+            let h2 = document.createElement("h2");
+            h2.innerHTML+= element.currency + " " + element.cost;
+            h2.classList.add('precio');
             let p1 = document.createElement("p");
             p1.classList.add('descripcion')
             p1.innerHTML+=element.description;
@@ -36,6 +39,7 @@ function listadoProductos(){
             image.setAttribute("src",element.image);
             imgDiv.appendChild(image);
             h3Div.appendChild(h3);
+            h3Div.appendChild(h2);
             h3Div.appendChild(p1);
             p2Div.appendChild(p2);
             containerDiv.appendChild(imgDiv)
