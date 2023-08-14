@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    const alertaDenegado = document.getElementById("alerta");
+    const btnDenegado = document.getElementById("btnDenegado");
+
     function accesoDenegado(){
-        alert("Acceso denegado");
+        alertaDenegado.classList.remove("hidden");
     }
 
     function validarPassword(password){
@@ -29,4 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
         let email = document.getElementById("email").value;
         login(password, email);
     });
+
+    btnDenegado.addEventListener("click", () => {
+        alertaDenegado.classList.add("hidden");
+        let password = document.getElementById("password");
+        let email = document.getElementById("email");
+        password.value= "";
+        email.value = "";
+    })
 })
