@@ -1,9 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    function accesoPermitido(){
-        alert("Accesso permitido");
-    }
-
     function accesoDenegado(){
         alert("Acceso denegado");
     }
@@ -20,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if ((validarPassword(password)) && (validarEmail(email))){
             localStorage.setItem("email", email);
             localStorage.setItem("password", password);
-            accesoPermitido();
             location.href = "index.html";
         } else {
             accesoDenegado();
