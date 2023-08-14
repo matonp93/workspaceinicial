@@ -75,3 +75,32 @@ main {
 .login .camp-registrate p {
 	margin-bottom: 0;
 }
+
+.hidden{
+	display: none;
+}
+
+#alerta{
+	position: absolute;
+	top: 5%;
+	left: 40%;
+	padding: 10px;
+	border: 1px solid red;
+	border-radius: 10px;
+	box-shadow: 0 0 10px 0px black;
+	background-color: salmon;
+	width: 20%;
+	text-align: center;
+}
+
+#alerta p{
+	font-size: 20px;
+	line-height: 2;
+	font-weight: 600;
+}
+
+#btnDenegado{
+	background-color:#fce9da;
+	border: 0px;
+	border-radius: 10px;
+}
