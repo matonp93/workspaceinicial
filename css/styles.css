@@ -190,3 +190,6 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+#deslogear {
+  background-color: rgb(233, 102, 102);
+}
