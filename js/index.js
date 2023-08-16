@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function(){
     function comprobarLogin(){
         return ((localStorage.getItem("email") != null) && (localStorage.getItem("password") != null))
     }
-
     if (!comprobarLogin()){
         location.href = "login.html"
     } 

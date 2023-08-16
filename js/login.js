@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    const btnInvitado = document.getElementById("btnInvitado");
     const alertaDenegado = document.getElementById("alerta");
     const btnDenegado = document.getElementById("btnDenegado");
 
@@ -39,5 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
         let email = document.getElementById("email");
         password.value= "";
         email.value = "";
+    })
+    
+    btnInvitado.addEventListener("click", ()=>{
+        localStorage.setItem("email", "invitado");
+        localStorage.setItem("password", "invitado");
+        location.href = "index.html";
     })
 })
