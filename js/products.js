@@ -4,6 +4,13 @@ const productsDesc = document.getElementById("productsDesc");
 let link = "https://japceibal.github.io/emercado-api/cats_products/";
 
 document.addEventListener("DOMContentLoaded",()=>{
+    function comprobarLogin(){
+        return ((localStorage.getItem("email") != null) && (localStorage.getItem("password") != null))
+    }
+    if (!comprobarLogin()){
+        location.href = "login.html"
+    } 
+    
     link+=localStorage.getItem("catID")+".json";
 
 switch (localStorage.getItem("catID")){
