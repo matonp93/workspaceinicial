@@ -12,6 +12,7 @@ body {
 }
 
 main {
+	margin-top: 70px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -122,3 +123,4 @@ main {
 	border: 0px;
 	border-radius: 10px;
 }
+
